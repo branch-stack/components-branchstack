@@ -1,0 +1,145 @@
+.bs_menu {
+  background-color: #15375c;
+  display: flex;
+  justify-content: center;
+}
+
+.bs_menu .bs_menu__list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  flex-direction: row;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.bs_menu .bs_menu__item {
+  display: inline-block;
+  flex: auto;
+  vertical-align: middle;
+}
+
+.bs_menu .bs_menu__link {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  display: inline-block;
+}
+
+.bs_menu .bs_menu__link:hover {
+  background-color: #f7f7f7;
+  color: #000000;
+}
+
+/* Estilos do dropdown */
+.bs_dropdown__menu {
+  background-color: #fff;
+  display: none;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  z-index: 999999;
+}
+
+.bs_menu .bs_menu__item:hover .bs_dropdown__menu {
+  display: block;
+}
+
+.bs_dropdown__item {
+  margin: 0;
+}
+
+.bs_dropdown__item:hover .bs_dropdown__submenu {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.bs_dropdown__link {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.bs_dropdown__link:hover {
+  background-color: #2b558d;
+  color: #ffffff;
+}
+
+.bs_dropdown .main-submenu {
+  /* width: 25%; */
+  height: 100%;
+  background-color: #fff;
+  /* box-shadow: 3px 6px 40px 0 rgba(0, 0, 0, .1); */
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.bs_dropdown-arrow {
+  top: 10%;
+  right: 10px;
+  color: #2b558d;
+}
+
+/* Estilos do submenu dos submenus */
+.bs_dropdown__submenu {
+  background-color: #f5f5f5;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 25%;
+  z-index: 2;
+  width: 25%;
+  left: 25%;
+}
+
+.bs_menu .bs_dropdown__item:hover .bs_dropdown__submenu {
+  display: flex;
+}
+
+.bs_dropdown__submenu-item {
+  margin: 0;
+}
+
+.bs_dropdown__submenu-item:hover .bs_dropdown__subsubmenu {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.bs_dropdown__submenu-link {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.bs_dropdown__submenu-link:hover {
+  background-color: #d4eaf7;
+  color: #ffffff;
+}
+
+.bs_dropdown .main-subsubmenu {
+  width: 25%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 3px 6px 40px 0 rgba(0, 0, 0, .1);
+}
+
+.container-submenu {
+  margin: 0 auto;
+}
+
+.bs_submenu-arrow {
+  top: 10%;
+  right: 10px;
+  color: #d4eaf7;
+}
