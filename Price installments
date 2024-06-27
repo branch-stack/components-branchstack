@@ -1,0 +1,24 @@
+{% assign max_installments = 6 %}
+{% assign min_installment_value = 20000 %}
+{% assign has_installments = false %}
+{% assign product_installments_quantity = 1 %}
+{% assign product_installments_value = price %}
+
+{% for i in (1..max_installments) %}
+  {% assign current_installment_value = price | divided_by: i %}
+  {% if current_installment_value >= min_installment_value %}
+    {% assign product_installments_quantity = i %}
+    {% assign product_installments_value = current_installment_value %}
+    {% assign has_installments = true %}
+  {% endif %}
+{% endfor %}
+
+{% if has_installments and product_installments_quantity > 1 %}
+  <p class="product__price-installments">
+    Em até {{ product_installments_quantity }}x de {{ product_installments_value | money }} 
+  </p>
+{% endif %}
+
+/* renderizar no componente */
+
+{% render 'price-installments', price: product.selected_or_first_available_variant.price %}
